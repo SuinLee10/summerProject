@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery Page</title>
+    <link href="header.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EDEDED;
+        }
+
+        .gallery {
+            margin-top:70px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 410px;
+            margin: 20px;
+        }
+
+        .write {
+            width: 160px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 1150px;
+            background-color: #CBCBCB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .writeButton {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .pencil {
+            width: 32px;
+            height: 31px;
+            margin-right: 20px;
+            margin-left: -10px;
+        }
+
+        .writeWord {
+            font-weight: 400;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .top-section {
+            width: 410px;
+            height: 320px;
+        }
+
+        .soccerPic {
+            width: 100%;
+            height: 100%;
+        }
+
+        .middle-section {
+            width: 410px;
+            height: 230px;
+            background-color: #FFFFFF;
+        }
+
+        .title {
+            width: 370px;
+            height: 50px;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .titleFont {
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            width: 370px;
+            height: 50px;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .subtitleFont {
+            font-weight: 400;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: -20px;
+        }
+
+        .profile {
+            width: 200px;
+            height: 31px;
+            margin-left: 252px;
+            margin-top: -50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profileImg {
+            width: 31px;
+            height: 31px;
+            margin-right: 10px;
+        }
+
+        .profileText {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .info-container {
+            width: 410px;
+            height: 31px;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .watch {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .watchImg {
+            width: 31px;
+            height: 31px;
+            margin-right: 10px;
+        }
+
+        .watchText {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            margin-left: 165px;
+        }
+
+        .scheduleImg {
+            width: 31px;
+            height: 31px;
+            margin-right: 10px;
+        }
+
+        .dateText {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+
+        .pageButton {
+            width: 50px;
+            height: 60px;
+            background-color: #CBCBCB;
+            border: none;
+            color: #333;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+
+        .pageButton1 {
+            width: 50px;
+            height: 60px;
+            background-color: #FFFFFF;
+            border: none;
+            color: #333;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 10px;
+            margin-left: 30px
+        }
+        .pageButton3 {
+            width: 50px;
+            height: 60px;
+            background-color: #FFFFFF;
+            border: none;
+            color: #333;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+
+        .pageButton:hover {
+            background-color: #3988FF;
+            color: #333;
+        }
+
+        .arrow {
+            width: 30px;
+            height: 30px;
+            margin: 0 -5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-bar">
+    <div class="header">
+        <div class="nav">
+            <img src="img/hisports.svg" alt="hisports">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="inform.html">Info</a></li>
+                <li><a href="aboutus.html">aboutus</a></li>
+            </ul>
+            <div class="buttons">
+                <button class="btn">Sign In</button>
+                <button class="btn">Join</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <div class="write">
+        <button class="writeButton" onclick="openPostform()">
+            <img src="img/pencil.png" alt="write" class="pencil">
+            <h2 class="writeWord">글쓰기</h2>
+        </button>
+    </div>
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer1.jpg" alt="soccerPicture1" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 1</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">이수인 학부생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">1</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/7(일) 18:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer2.jpg" alt="soccerPicture2" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 2</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">박지성 교수</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">5</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/8(월) 19:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer3.jpeg" alt="soccerPicture3" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 3</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">손흥민 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">2</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/9(화) 20:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer4.jpg" alt="soccerPicture4" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 4</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">김연아 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">3</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/10(수) 21:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer5.jpg" alt="soccerPicture5" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 5</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">이강인 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">4</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/11(목) 22:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer6.jpg" alt="soccerPicture6" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 6</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">박주영 교수</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">6</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/12(금) 23:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 7 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer7.jpeg" alt="soccerPicture7" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 7</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">손흥민 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">7</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/13(토) 24:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer8.jpeg" alt="soccerPicture8" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 8</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">김민재 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">8</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/14(일) 25:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 9 -->
+    <div class="card">
+        <div class="top-section">
+            <img src="img/soccerImg/soccer9.jpg" alt="soccerPicture9" class="soccerPic"/>
+        </div>
+        <div class="middle-section">
+            <div class="title">
+                <p class="titleFont">카이퍼 축구 후기 9</p>
+            </div>
+            <div class="subtitle">
+                <p class="subtitleFont">흥미로운 축구 경기! 선수들의 뛰어난 실력</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.png" alt="profile Img" class="profileImg"/>
+                <p class="profileText">이재성 학생</p>
+            </div>
+            <div class="info-container">
+                <div class="watch">
+                    <img src="img/see.png" alt="watch Img" class="watchImg"/>
+                    <p class="watchText">9</p>
+                </div>
+                <div class="date">
+                    <img src="img/schedule.png" alt="schedule Img" class="scheduleImg"/>
+                    <p class="dateText">7/15(월) 26:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <button class="pageButton3">
+            <img src="img/arrow1.png" alt="Previous" class="arrow">
+        </button>
+        <button class="pageButton">1</button>
+        <button class="pageButton">2</button>
+        <button class="pageButton">3</button>
+        <button class="pageButton1">
+            <img src="img/arrow2.png" alt="Next" class="arrow">
+        </button>
+    </div>
+
+</div>
+
+<script>
+    function openPostform() {
+        window.location.href = 'Post.html';
+    }
+</script>
+</body>
+</html>

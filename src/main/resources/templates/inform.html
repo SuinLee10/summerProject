@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="nav-bar">
+  <div class="header">
+    <div class="nav">
+      <img src="img/hisports.svg" alt="hisports">
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="inform.html">Info</a></li>
+        <li><a href="aboutus.html">aboutus</a></li>
+      </ul>
+      <div class="buttons">
+        <button class="btn">Sign In</button>
+        <button class="btn">Join</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="form-container shadow-lg">
+    <h2 class="text-center">Application Form</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <div class="gender-group d-flex">
+          <input type="radio" id="male" name="gender" value="남성" required>
+          <label for="male" class="gender-label">
+            <img src="https://via.placeholder.com/40/0000FF/FFFFFF?text=♂" alt="남성">
+          </label>
+          <input type="radio" id="female" name="gender" value="여성" required>
+          <label for="female" class="gender-label">
+            <img src="https://via.placeholder.com/40/FF00FF/FFFFFF?text=♀" alt="여성">
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="position">Position:</label>
+        <select class="form-control" id="position" required>
+          <option value="" disabled selected>select</option>
+          <option value="공격수">공격수</option>
+          <option value="미드필더">미드필더</option>
+          <option value="수비수">수비수</option>
+          <option value="골키퍼">골키퍼</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Level:</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="levelA" value="A">
+          <label class="form-check-label" for="levelA">A</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="levelB" value="B">
+          <label class="form-check-label" for="levelB">B</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="levelC" value="C">
+          <label class="form-check-label" for="levelC">C</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="levelD" value="D">
+          <label class="form-check-label" for="levelD">D</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <small class="form-text text-muted">
+          불참시 다음 매칭에 제한이 있을 수 있습니다.
+        </small>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">신청하기</button>
+    </form>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

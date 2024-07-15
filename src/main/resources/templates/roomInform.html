@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="header.css" rel="stylesheet">
+    <link href="roomInform.css" rel="stylesheet">
+    <title>카이퍼 축구 팀 모집</title>
+</head>
+<body>
+<div class="nav-bar">
+    <div class="header">
+        <div class="nav">
+            <img src="img/hisports.svg" alt="hisports">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="inform.html">Info</a></li>
+                <li><a href="aboutus.html">aboutus</a></li>
+            </ul>
+            <div class="buttons">
+                <button class="btn">Sign In</button>
+                <button class="btn">Join</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-container">
+    <img src="img/field.jpeg" alt="field" class="field-img">
+</div>
+<div class="room-container">
+    <div class="matching-info">
+        <h2>매칭 정보</h2>
+        <p>모집 인원: 10 ~ 18명</p>
+        <p>모집 성별: 남</p>
+        <p>준비물: 풋살화, 운동화</p>
+        <p>6 vs 6, 3파전</p>
+    </div>
+    <div class="announcement">
+        <h2>11월 10일 월요일 18:00</h2>
+        <p>카이퍼 축구 팀 모집! 히딩크 풋살장</p>
+    </div>
+    <div class="manager">
+        <img src="img/person.png" alt="매니저 사진">
+        <div>
+            <h2>매니저 정보</h2>
+            <p>매니저: 홍길동</p>
+            <p>오픈 카카오톡: 12345</p>
+        </div>
+    </div>
+    <div class="rules">
+        <h2>전달 사항</h2>
+        <ul>
+            <li>모든 파울은 사이드라인에서 킥인 골키퍼에게 백패스 가능 손으로는 잡으면 안 돼요.</li>
+            <li>사람을 향한 태클 금지.</li>
+            <li>풋살화와 개인 음료만 준비하세요.</li>
+            <li>매니저가 경기 진행을 도와드려요.</li>
+            <li>골키퍼와 휴식을 공평하게 돌아가면서 해요.</li>
+            <li>레벨 데이터를 기준으로 팀을 나눠요.</li>
+            <li>친구끼리 와도 팀 실력이 맞지 않으면 다른 팀이 될 수 있어요.</li>
+            <li>서로 존중하고 격려하며 함께 즐겨요.</li>
+        </ul>
+    </div>
+    <div class="apply">
+        <button onclick="openApplicationForm()">지금 바로 신청하세요!</button>
+    </div>
+</div>
+
+<script>
+    function openApplicationForm() {
+        window.location.href = 'inform.html';
+    }
+</script>
+</body>
+</html>
