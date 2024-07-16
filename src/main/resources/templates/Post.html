@@ -4,32 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post</title>
-    <link rel="stylesheet" href ="header.css">
     <link rel="stylesheet" href="postcss.css">
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+<div class="nav-bar">
+    <div class="header">
+        <div class="nav">
+            <img src="img/hisports.svg" alt="hisports">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="inform.html">Info</a></li>
+                <li><a href="aboutus.html">aboutus</a></li>
+            </ul>
+            <div class="buttons">
+                <button class="btn">Sign In</button>
+                <button class="btn">Join</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="post-container">
     <h1>Post</h1>
     <input type="text" id="title" placeholder="제목을 입력하세요">
-    <div class="textarea-container" contenteditable="true">
-        <p>내용을 입력하세요</p>
+    <textarea class="textarea-container" contenteditable="true"  placeholder="내용을 입력하세요"></textarea>
         <div class="actions">
             <div class="buttons">
                 <button id="upload-btn"><span class="icon">✏️</span> 업로드</button>
                 <button id="delete-btn"><span class="icon">🗑️</span> 삭제</button>
             </div>
-            <div class="icons">
+            <div class="icons" contenteditable="false">
                 <span class="icon"><i class="fas fa-font"></i></span>
                 <span class="icon"><i class="fas fa-file-upload"></i></span>
                 <span class="icon"><i class="far fa-smile"></i></span>
                 <span class="icon"><i class="fas fa-camera"></i></span>
             </div>
-        </div>
-    </div>
-</div>
 
 
-<script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 </html>

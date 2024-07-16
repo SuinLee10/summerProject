@@ -1,6 +1,6 @@
 document.getElementById('upload-btn').addEventListener('click', function() {
     const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+    const content = document.querySelector('.textarea-container p').textContent;
 
     if (title && content) {
         alert('업로드 성공!');
@@ -11,5 +11,5 @@ document.getElementById('upload-btn').addEventListener('click', function() {
 
 document.getElementById('delete-btn').addEventListener('click', function() {
     document.getElementById('title').value = '';
-    document.getElementById('content').value = '';
+    document.querySelector('.textarea-container p').textContent = '';
 });
